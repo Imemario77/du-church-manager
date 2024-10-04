@@ -19,6 +19,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Search, UserPlus } from "lucide-react";
+import Link from "next/link";
 
 const mockMembers = [
   {
@@ -71,10 +72,12 @@ export default function MembersPage() {
               className="pl-8"
             />
           </div>
-          <Button>
-            <UserPlus className="mr-2 h-4 w-4" />
-            Add New Member
-          </Button>
+          <Link href="/members/add">
+            <Button>
+              <UserPlus className="mr-2 h-4 w-4" />
+              Add New Member
+            </Button>
+          </Link>
         </div>
         <Table>
           <TableHeader>

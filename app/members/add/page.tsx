@@ -84,7 +84,7 @@ export default function AddMemberPage() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="phone">Phone Number</Label>
-              <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" />
+              <Input id="phone" type="tel" placeholder="+2348148672222" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="birthdate">Date of Birth</Label>
@@ -150,9 +150,17 @@ export default function AddMemberPage() {
               <Textarea id="notes" placeholder="Any additional information" />
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="flex gap-2 ">
             <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? "Adding Member..." : "Add Member"}
+            </Button>
+            <Button
+              type="submit"
+              variant="outline"
+              className="w-full"
+              disabled={isLoading}
+            >
+              Cancel
             </Button>
           </CardFooter>
         </form>
