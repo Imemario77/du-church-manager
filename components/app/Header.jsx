@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Sidebar from "@/components/app/Sidebar";
 
-export default function Header({ setActiveTab }) {
+export default function Header({ setActiveTab, activeTab }) {
   return (
     <header className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -22,8 +22,8 @@ export default function Header({ setActiveTab }) {
               <Sidebar setActiveTab={setActiveTab} />
             </SheetContent>
           </Sheet>
-          <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate">
-            Dashboard
+          <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate capitalize">
+            {activeTab}
           </h2>
         </div>
         <div className="flex items-center">
